@@ -1,24 +1,44 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.4"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
-  }
+    "name": "portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "prettier": "npx prettier --write \"**/*.{ts,tsx,json}\"",
+        "lint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
+        "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+        "lint:scss": "npx stylelint \"**/*.scss\"",
+        "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
+    },
+    "dependencies": {
+        "i18next": "^23.7.11",
+        "next": "14.0.4",
+        "next-i18next": "^15.1.1",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-i18next": "^13.5.0"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "eslint": "^8",
+        "eslint-config-next": "14.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-i18next": "^6.0.3",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-unused-imports": "^3.0.0",
+        "prettier": "^3.1.1",
+        "sass": "^1.69.5",
+        "stylelint": "^14.5.3",
+        "stylelint-config-standard-scss": "^3.0.0",
+        "typescript": "^5"
+    },
+    "ts-standard": {
+        "project": "./tsconfig.json"
+    }
 }
